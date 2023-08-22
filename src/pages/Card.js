@@ -9,6 +9,7 @@ import WatchLaterIcon from '@mui/icons-material/WatchLater';
 import NoteAddIcon from '@mui/icons-material/NoteAdd';
 import InfoIcon from '@mui/icons-material/Info';
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
+import Input from "../components/Input";
 
 
 
@@ -162,27 +163,27 @@ const style = {
 return(
 <section id= "cuecard">
 <Grid container spacing={1}>
-    <Grid item xs={12} sm={12}>
-        <Paper elevation={4} sx={{backgroundColor:"#0f1924",maxWidth:"650px",padding:5,margin:"auto"}}>
+    <Grid item xs={12} sm={12} md={8}>
+        <Paper elevation={4} sx={{backgroundColor:"#0f1924",width:"90%",padding:5,margin:"auto",maxHeight:"400px"}}>
        <Box> 
-                 <Typography variant="h4" sx={{color:"#a6e22e"}}> {post[random]?.title} </Typography>
+                 <Typography variant="h4" sx={{color:"#a6e22e"}}> {random}. {post[random]?.title} </Typography>
        </Box>
        <Box sx={{color:"#fc3165",fontWeight:"bold"}}>
                 <ul>
-                    <li> <Typography variant="subtitle1"> {post[random]?.clue.first}</Typography></li>
-                    <li> <Typography variant="subtitle1"> {post[random]?.clue.second}</Typography></li>
-                    <li> <Typography variant="subtitle1"> {post[random]?.clue.third}</Typography></li>
-                    <li> <Typography variant="subtitle1"> {post[random]?.clue.fourth}</Typography></li>
-                    <li> <Typography variant="subtitle1"> {post[random]?.clue.fifth}</Typography></li>
-                    <li> <Typography variant="subtitle1"> {post[random]?.clue.sixth}</Typography></li>
+                    <li> <Typography variant="h6"> {post[random]?.clue.first}</Typography></li>
+                    <li> <Typography variant="h6"> {post[random]?.clue.second}</Typography></li>
+                    <li> <Typography variant="h6"> {post[random]?.clue.third}</Typography></li>
+                    <li> <Typography variant="h6"> {post[random]?.clue.fourth}</Typography></li>
+                    <li> <Typography variant="h6"> {post[random]?.clue.fifth}</Typography></li>
+                    <li> <Typography variant="h6"> {post[random]?.clue.sixth}</Typography></li>
                 </ul>
        </Box>
-       <Box>
-        <Button variant="outlined" sx={{color:"#a6e22e","&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} onClick={timerStart} > <PlayCircleFilledIcon sx={{marginRight:1}}/> Start ({isClick ? count : 0})</Button>
-        <Button variant="outlined" sx={{color:"#a6e22e","&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} onClick={stopTimer}  > <StopCircleIcon sx={{marginRight:1}}/> Stop  </Button>
-        <Button variant="outlined" sx={{color:"#a6e22e","&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} >  <WatchLaterIcon sx={{marginRight:1}}/> <Time/></Button>
-        <Button variant="outlined" sx={{color:"#a6e22e","&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} onClick={handleRandom} > <NoteAddIcon sx={{marginRight:1}}/> New Card</Button>
-        <Button variant="outlined" sx={{color:"#a6e22e","&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}}  onClick={handleOpen} > <InfoIcon sx={{marginRight:1}}/>  Instruction </Button>
+       <Box sx={{marginTop:3}}>
+        <Button variant="outlined" sx={{color:"#a6e22e",marginRight:2,"&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} onClick={timerStart} > <PlayCircleFilledIcon sx={{marginRight:1}}/> Start ({isClick ? count : 0})</Button>
+        <Button variant="outlined" sx={{color:"#a6e22e",marginRight:2,"&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} onClick={stopTimer}  > <StopCircleIcon sx={{marginRight:1}}/> Stop  </Button>
+        <Button variant="outlined" sx={{color:"#a6e22e",marginRight:2,"&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} >  <WatchLaterIcon sx={{marginRight:1}}/> <Time/></Button>
+        <Button variant="outlined" sx={{color:"#a6e22e",marginRight:2,"&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}} onClick={handleRandom} > <NoteAddIcon sx={{marginRight:1}}/> New Card</Button>
+        <Button variant="outlined" sx={{color:"#a6e22e",marginRight:2,"&:hover":{color:"#71c92c",borderColor:"#a6e22e"}}}  onClick={handleOpen} > <InfoIcon sx={{marginRight:1}}/>  Instruction </Button>
        </Box>
        <Modal
         open={open}
@@ -207,6 +208,12 @@ return(
         </Box>
     </Modal>
         </Paper>
+    </Grid>
+
+
+    <Grid item xs={12} sm={12} md={4}>
+    <Input/>
+
     </Grid>
 </Grid>
 <Grid container spacing={1} sx={{marginTop:5}}>
