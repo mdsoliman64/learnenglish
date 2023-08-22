@@ -164,7 +164,7 @@ return(
 <section id= "cuecard">
 <Grid container spacing={1}>
     <Grid item xs={12} sm={12} md={8}>
-        <Paper elevation={4} sx={{backgroundColor:"#0f1924",width:"90%",padding:5,margin:"auto",maxHeight:"400px"}}>
+        <Paper elevation={4} sx={{backgroundColor:"#0f1924",width:"90%",padding:5,margin:"auto"}}>
        <Box> 
                  <Typography variant="h4" sx={{color:"#a6e22e"}}> {random}. {post[random]?.title} </Typography>
        </Box>
