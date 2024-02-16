@@ -24,7 +24,7 @@ export default function About() {
                 <Typography sx={{color:"white",textAlign:"justify"}}>
                 I am Md Soliman.As a skilled and passionate full stack web developer with expertise in the MERN (MongoDB, Express.js, React.js, Node.js) stack, combined with my proficiency in search engine optimization (SEO), I bring a comprehensive approach to creating exceptional web experiences. With a solid foundation in both front-end and back-end development, I have successfully delivered numerous projects, leveraging the power of modern web technologies
                 </Typography>
-                <Button variant="outlined" href="https://mdsoliman64.github.io/me/" sx={{color:"#fdc500",borderBlockColor:"#fdc500",marginTop:5}}> Lets talk with me</Button>
+                <Button variant="outlined" href="https://mdsoliman.netlify.app/" sx={{color:"#fdc500",borderBlockColor:"#fdc500",marginTop:5}}> Lets talk with me</Button>
             </Box>
         </Paper>
     </Grid>
